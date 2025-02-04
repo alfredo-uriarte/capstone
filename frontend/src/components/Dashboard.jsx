@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-/* import { checkAuthStatus, logout } from "../utils/api"; */
-import { checkAuthStatus } from "../utils/api";
+import { checkAuthStatus, logout } from "../utils/api";
+// import { checkAuthStatus } from "../utils/api";
 import styles from "./Dashboard.module.css";
 import { Link } from "react-router-dom";
 
@@ -21,10 +21,10 @@ export default function Dashboard() {
     }
   }, [navigate]);
 
-  /* const handleLogout = () => {
+   const handleLogout = () => {
     logout();
     navigate("/login", { replace: true });
-  }; */
+  }; 
 
   if (loading) {
     return <div className={styles.loading}>Loading...</div>;
@@ -48,7 +48,7 @@ export default function Dashboard() {
         <div className={styles.formWrapper}>
           <div className={styles.header}>
             <h1 className={styles.formTitle}>Dashboard</h1>
-            <button /* onClick={handleLogout} */ className={styles.button}>
+            <button  onClick={handleLogout} className={styles.button}>
               Logout
             </button>
           </div>
