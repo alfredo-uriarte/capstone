@@ -18,7 +18,7 @@ const WaveCanvas = () => {
 
     window.addEventListener('resize', init);
     init();
-
+///changes new
     const drawWave = () => {
       ctx.fillStyle = 'black';
       ctx.globalAlpha = 0.5;
